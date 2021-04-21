@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "758B95A226418CA300C55F35"
-               BuildableName = "VCRURLConnection_tvOS.framework"
+               BuildableName = "VCRURLConnection.framework"
                BlueprintName = "VCRURLConnection tvOS"
                ReferencedContainer = "container:VCRURLConnection.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "758B95A226418CA300C55F35"
-            BuildableName = "VCRURLConnection_tvOS.framework"
+            BuildableName = "VCRURLConnection.framework"
             BlueprintName = "VCRURLConnection tvOS"
             ReferencedContainer = "container:VCRURLConnection.xcodeproj">
          </BuildableReference>
