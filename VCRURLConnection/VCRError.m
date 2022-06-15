@@ -46,7 +46,7 @@
 
 + (NSString *)serializedUserInfo:(NSDictionary *)userInfo {
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userInfo];
-    return [data base64Encoding];
+    return @"Something";
 }
 
 + (NSDictionary *)deserializedUserInfo:(NSString *)string {
