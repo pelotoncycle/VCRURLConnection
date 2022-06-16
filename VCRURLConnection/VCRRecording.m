@@ -101,20 +101,22 @@
         self.data = [NSJSONSerialization dataWithJSONObject:body options:0 error:nil];
     } else if ([self isText] || [body isKindOfClass:[NSString class]]) {
         self.data = [body dataUsingEncoding:NSUTF8StringEncoding];
-    } else if ([body isKindOfClass:[NSString class]]) {
-        self.data = [[NSData alloc] initWithBase64EncodedString:options];
     }
+    
+   /* else if ([body isKindOfClass:[NSString class]]) {
+        self.data = [[NSData alloc] initWithBase64EncodedString:options];
+    } */
 }
 
 - (NSString *)body {
     
     return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    
-    if ([self isText]) {
-        return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    } else {
-        return [self.data base64EncodedStringWithOptions];
-    }
+//
+//    if ([self isText]) {
+//        return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
+//    } else {
+//        return [self.data base64EncodedStringWithOptions];
+//    }
 }
 
 - (id)JSON {
