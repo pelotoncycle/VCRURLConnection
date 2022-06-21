@@ -109,11 +109,7 @@
 }
 
 - (NSString *)body {
-    if ([self isText]) {
-        return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-    } else {
-        return [self.data base64Encoding];
-    }
+    return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
 }
 
 - (id)JSON {
