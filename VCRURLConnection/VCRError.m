@@ -45,7 +45,13 @@
 }
 
 + (NSString *)serializedUserInfo:(NSDictionary *)userInfo {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userInfo];
+    NSData *data;
+    @try {
+        data = [NSKeyedArchiver archivedDataWithRootObject:userInfo];
+    } @catch (NSException *exception) {
+        NSLog(@"Error occurred when archiving error: %@", [exception description]);
+        data = [NSData data];
+    }
     return [data base64Encoding];
 }
 
