@@ -102,7 +102,7 @@
     } else if ([self isText] || [body isKindOfClass:[NSString class]]) {
         self.data = [body dataUsingEncoding:NSUTF8StringEncoding];
     } else if ([body isKindOfClass:[NSString class]]) {
-        self.data = [[NSData alloc] initWithBase64EncodedString:options];
+        self.data = [[NSData alloc] initWithBase64Encoding:body];
     }
 }
 
