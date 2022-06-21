@@ -99,7 +99,7 @@
 {
     if ([body isKindOfClass:[NSDictionary class]]) {
         self.data = [NSJSONSerialization dataWithJSONObject:body options:0 error:nil];
-    } else if ([self isText]) {
+    } else if ([self isText])  {
         self.data = [body dataUsingEncoding:NSUTF8StringEncoding];
     } else if ([body isKindOfClass:[NSString class]]) {
         self.data = [[NSData alloc] initWithBase64Encoding:body];
@@ -107,7 +107,7 @@
 }
 
 - (NSString *)body {
-    return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding;]
+    return [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
 }
 
 - (id)JSON {
